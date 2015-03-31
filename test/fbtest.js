@@ -300,4 +300,12 @@ module.exports = {
       'class A<T: Foo> {}',
       'function bar<T: ?number>() {}',
     ],
+    'Existential Operator': [
+        'a?.b',
+        'a?.b?.c',
+        'a?["b"]',
+        'a.b?.c',
+        'a?.b.c?.d',
+        '(a?.b).c',
+    ]
 };

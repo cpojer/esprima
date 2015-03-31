@@ -2432,12 +2432,13 @@
             return object;
         },
 
-        createMemberExpression: function (accessor, object, property) {
+        createMemberExpression: function (accessor, object, property, optional) {
             return {
                 type: Syntax.MemberExpression,
                 computed: accessor === '[',
                 object: object,
-                property: property
+                property: property,
+                optional: optional
             };
         },
 
@@ -3681,14 +3682,25 @@
 
         expr = matchKeyword('new') ? parseNewExpression() : parsePrimaryExpression();
 
-        while (match('.') || match('[') || match('(') || (lookahead.type === Token.Template && lookahead.head)) {
+        while (
+            // Existential Operator
+            (match('?') && (lookahead2().value === '.' || lookahead2().value === '[')) ||
+            // Not-existential operator
+            match('.') || match('[') || match('(') || (lookahead.type === Token.Template && lookahead.head)
+        ) {
             if (match('(')) {
                 args = parseArguments();
                 expr = markerApply(marker, delegate.createCallExpression(expr, args));
             } else if (match('[')) {
-                expr = markerApply(marker, delegate.createMemberExpression('[', expr, parseComputedMember()));
+                expr = markerApply(marker, delegate.createMemberExpression('[', expr, parseComputedMember(), false));
+            } else if (match('?') && lookahead2().value === '[') {
+                lex();
+                expr = markerApply(marker, delegate.createMemberExpression('[', expr, parseComputedMember(), true));
             } else if (match('.')) {
-                expr = markerApply(marker, delegate.createMemberExpression('.', expr, parseNonComputedMember()));
+                expr = markerApply(marker, delegate.createMemberExpression('.', expr, parseNonComputedMember(), false));
+            } else if (match('?') && lookahead2().value === '.') {
+                lex();
+                expr = markerApply(marker, delegate.createMemberExpression('.', expr, parseNonComputedMember(), true));
             } else {
                 expr = markerApply(marker, delegate.createTaggedTemplateExpression(expr, parseTemplateLiteral()));
             }
@@ -3704,9 +3716,9 @@
 
         while (match('.') || match('[') || (lookahead.type === Token.Template && lookahead.head)) {
             if (match('[')) {
-                expr = markerApply(marker, delegate.createMemberExpression('[', expr, parseComputedMember()));
+                expr = markerApply(marker, delegate.createMemberExpression('[', expr, parseComputedMember(), false));
             } else if (match('.')) {
-                expr = markerApply(marker, delegate.createMemberExpression('.', expr, parseNonComputedMember()));
+                expr = markerApply(marker, delegate.createMemberExpression('.', expr, parseNonComputedMember(), false));
             } else {
                 expr = markerApply(marker, delegate.createTaggedTemplateExpression(expr, parseTemplateLiteral()));
             }

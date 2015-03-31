@@ -5431,6 +5431,7 @@ var harmonyTestFixture = {
                                 end: { line: 1, column: 5 }
                             }
                         },
+                        optional: false,
                         range: [1, 5],
                         loc: {
                             start: { line: 1, column: 1 },
@@ -10686,6 +10687,7 @@ var harmonyTestFixture = {
                                 end: { line: 1, column: 24 }
                             }
                         },
+                        optional: false,
                         range: [11, 24],
                         loc: {
                             start: { line: 1, column: 11 },
@@ -18036,6 +18038,7 @@ var harmonyTestFixture = {
                             }
                         }
                     },
+                    "optional": false,
                     "range": [
                         0,
                         8
@@ -18878,6 +18881,7 @@ var harmonyTestFixture = {
                                 }
                             }
                         },
+                        "optional": false,
                         "range": [
                             10,
                             18

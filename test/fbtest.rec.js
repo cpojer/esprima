@@ -4,7 +4,7 @@
 * tests/fbtest.js and run tools/generate-fbtest.js
 */
 
-var numTests = 223
+var numTests = 229
 var testFixture;
 
 var fbTestFixture = {
@@ -14213,6 +14213,320 @@ var fbTestFixture = {
             loc: {
                 start: { line: 1, column: 0 },
                 end: { line: 1, column: 29 }
+            }
+        },
+    },
+    'Existential Operator': {
+        'a?.b': {
+            type: 'ExpressionStatement',
+            expression: {
+                type: 'MemberExpression',
+                computed: false,
+                object: {
+                    type: 'Identifier',
+                    name: 'a',
+                    range: [0, 1],
+                    loc: {
+                        start: { line: 1, column: 0 },
+                        end: { line: 1, column: 1 }
+                    }
+                },
+                property: {
+                    type: 'Identifier',
+                    name: 'b',
+                    range: [3, 4],
+                    loc: {
+                        start: { line: 1, column: 3 },
+                        end: { line: 1, column: 4 }
+                    }
+                },
+                optional: true,
+                range: [0, 4],
+                loc: {
+                    start: { line: 1, column: 0 },
+                    end: { line: 1, column: 4 }
+                }
+            },
+            range: [0, 4],
+            loc: {
+                start: { line: 1, column: 0 },
+                end: { line: 1, column: 4 }
+            }
+        },
+        'a?.b?.c': {
+            type: 'ExpressionStatement',
+            expression: {
+                type: 'MemberExpression',
+                computed: false,
+                object: {
+                    type: 'MemberExpression',
+                    computed: false,
+                    object: {
+                        type: 'Identifier',
+                        name: 'a',
+                        range: [0, 1],
+                        loc: {
+                            start: { line: 1, column: 0 },
+                            end: { line: 1, column: 1 }
+                        }
+                    },
+                    property: {
+                        type: 'Identifier',
+                        name: 'b',
+                        range: [3, 4],
+                        loc: {
+                            start: { line: 1, column: 3 },
+                            end: { line: 1, column: 4 }
+                        }
+                    },
+                    optional: true,
+                    range: [0, 4],
+                    loc: {
+                        start: { line: 1, column: 0 },
+                        end: { line: 1, column: 4 }
+                    }
+                },
+                property: {
+                    type: 'Identifier',
+                    name: 'c',
+                    range: [6, 7],
+                    loc: {
+                        start: { line: 1, column: 6 },
+                        end: { line: 1, column: 7 }
+                    }
+                },
+                optional: true,
+                range: [0, 7],
+                loc: {
+                    start: { line: 1, column: 0 },
+                    end: { line: 1, column: 7 }
+                }
+            },
+            range: [0, 7],
+            loc: {
+                start: { line: 1, column: 0 },
+                end: { line: 1, column: 7 }
+            }
+        },
+        'a?["b"]': {
+            type: 'ExpressionStatement',
+            expression: {
+                type: 'MemberExpression',
+                computed: true,
+                object: {
+                    type: 'Identifier',
+                    name: 'a',
+                    range: [0, 1],
+                    loc: {
+                        start: { line: 1, column: 0 },
+                        end: { line: 1, column: 1 }
+                    }
+                },
+                property: {
+                    type: 'Literal',
+                    value: 'b',
+                    raw: '"b"',
+                    range: [3, 6],
+                    loc: {
+                        start: { line: 1, column: 3 },
+                        end: { line: 1, column: 6 }
+                    }
+                },
+                optional: true,
+                range: [0, 7],
+                loc: {
+                    start: { line: 1, column: 0 },
+                    end: { line: 1, column: 7 }
+                }
+            },
+            range: [0, 7],
+            loc: {
+                start: { line: 1, column: 0 },
+                end: { line: 1, column: 7 }
+            }
+        },
+        'a.b?.c': {
+            type: 'ExpressionStatement',
+            expression: {
+                type: 'MemberExpression',
+                computed: false,
+                object: {
+                    type: 'MemberExpression',
+                    computed: false,
+                    object: {
+                        type: 'Identifier',
+                        name: 'a',
+                        range: [0, 1],
+                        loc: {
+                            start: { line: 1, column: 0 },
+                            end: { line: 1, column: 1 }
+                        }
+                    },
+                    property: {
+                        type: 'Identifier',
+                        name: 'b',
+                        range: [2, 3],
+                        loc: {
+                            start: { line: 1, column: 2 },
+                            end: { line: 1, column: 3 }
+                        }
+                    },
+                    optional: false,
+                    range: [0, 3],
+                    loc: {
+                        start: { line: 1, column: 0 },
+                        end: { line: 1, column: 3 }
+                    }
+                },
+                property: {
+                    type: 'Identifier',
+                    name: 'c',
+                    range: [5, 6],
+                    loc: {
+                        start: { line: 1, column: 5 },
+                        end: { line: 1, column: 6 }
+                    }
+                },
+                optional: true,
+                range: [0, 6],
+                loc: {
+                    start: { line: 1, column: 0 },
+                    end: { line: 1, column: 6 }
+                }
+            },
+            range: [0, 6],
+            loc: {
+                start: { line: 1, column: 0 },
+                end: { line: 1, column: 6 }
+            }
+        },
+        'a?.b.c?.d': {
+            type: 'ExpressionStatement',
+            expression: {
+                type: 'MemberExpression',
+                computed: false,
+                object: {
+                    type: 'MemberExpression',
+                    computed: false,
+                    object: {
+                        type: 'MemberExpression',
+                        computed: false,
+                        object: {
+                            type: 'Identifier',
+                            name: 'a',
+                            range: [0, 1],
+                            loc: {
+                                start: { line: 1, column: 0 },
+                                end: { line: 1, column: 1 }
+                            }
+                        },
+                        property: {
+                            type: 'Identifier',
+                            name: 'b',
+                            range: [3, 4],
+                            loc: {
+                                start: { line: 1, column: 3 },
+                                end: { line: 1, column: 4 }
+                            }
+                        },
+                        optional: true,
+                        range: [0, 4],
+                        loc: {
+                            start: { line: 1, column: 0 },
+                            end: { line: 1, column: 4 }
+                        }
+                    },
+                    property: {
+                        type: 'Identifier',
+                        name: 'c',
+                        range: [5, 6],
+                        loc: {
+                            start: { line: 1, column: 5 },
+                            end: { line: 1, column: 6 }
+                        }
+                    },
+                    optional: false,
+                    range: [0, 6],
+                    loc: {
+                        start: { line: 1, column: 0 },
+                        end: { line: 1, column: 6 }
+                    }
+                },
+                property: {
+                    type: 'Identifier',
+                    name: 'd',
+                    range: [8, 9],
+                    loc: {
+                        start: { line: 1, column: 8 },
+                        end: { line: 1, column: 9 }
+                    }
+                },
+                optional: true,
+                range: [0, 9],
+                loc: {
+                    start: { line: 1, column: 0 },
+                    end: { line: 1, column: 9 }
+                }
+            },
+            range: [0, 9],
+            loc: {
+                start: { line: 1, column: 0 },
+                end: { line: 1, column: 9 }
+            }
+        },
+        '(a?.b).c': {
+            type: 'ExpressionStatement',
+            expression: {
+                type: 'MemberExpression',
+                computed: false,
+                object: {
+                    type: 'MemberExpression',
+                    computed: false,
+                    object: {
+                        type: 'Identifier',
+                        name: 'a',
+                        range: [1, 2],
+                        loc: {
+                            start: { line: 1, column: 1 },
+                            end: { line: 1, column: 2 }
+                        }
+                    },
+                    property: {
+                        type: 'Identifier',
+                        name: 'b',
+                        range: [4, 5],
+                        loc: {
+                            start: { line: 1, column: 4 },
+                            end: { line: 1, column: 5 }
+                        }
+                    },
+                    optional: true,
+                    range: [1, 5],
+                    loc: {
+                        start: { line: 1, column: 1 },
+                        end: { line: 1, column: 5 }
+                    }
+                },
+                property: {
+                    type: 'Identifier',
+                    name: 'c',
+                    range: [7, 8],
+                    loc: {
+                        start: { line: 1, column: 7 },
+                        end: { line: 1, column: 8 }
+                    }
+                },
+                optional: false,
+                range: [0, 8],
+                loc: {
+                    start: { line: 1, column: 0 },
+                    end: { line: 1, column: 8 }
+                }
+            },
+            range: [0, 8],
+            loc: {
+                start: { line: 1, column: 0 },
+                end: { line: 1, column: 8 }
             }
         },
     },

@@ -48,8 +48,8 @@ function varDecl(decls) { return Pattern({ type: "VariableDeclaration", declarat
 function letDecl(decls) { return Pattern({ type: "VariableDeclaration", declarations: decls, kind: "let" }) }
 function constDecl(decls) { return Pattern({ type: "VariableDeclaration", declarations: decls, kind: "const" }) }
 function ident(name) { return Pattern({ type: "Identifier", name: name }) }
-function dotExpr(obj, id) { return Pattern({ type: "MemberExpression", computed: false, object: obj, property: id }) }
-function memExpr(obj, id) { return Pattern({ type: "MemberExpression", computed: true, object: obj, property: id }) }
+function dotExpr(obj, id) { return Pattern({ type: "MemberExpression", computed: false, object: obj, property: id, optional: false }) }
+function memExpr(obj, id) { return Pattern({ type: "MemberExpression", computed: true, object: obj, property: id, optional: false }) }
 function forStmt(init, test, update, body) { return Pattern({ type: "ForStatement", init: init, test: test, update: update, body: body }) }
 function forInStmt(lhs, rhs, body) { return Pattern({ type: "ForInStatement", left: lhs, right: rhs, body: body, each: false }) }
 function forEachInStmt(lhs, rhs, body) { return Pattern({ type: "ForInStatement", left: lhs, right: rhs, body: body, each: true }) }

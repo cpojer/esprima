@@ -6111,6 +6111,7 @@ var testFixtureOptions = {},
                             end: { line: 1, column: 18 }
                         }
                     },
+                    optional: false,
                     range: [8, 18],
                     loc: {
                         start: { line: 1, column: 8 },
@@ -6295,6 +6296,7 @@ var testFixtureOptions = {},
                             end: { line: 1, column: 13 }
                         }
                     },
+                    optional: false,
                     range: [0, 13],
                     loc: {
                         start: { line: 1, column: 0 },
@@ -6340,6 +6342,7 @@ var testFixtureOptions = {},
                             end: { line: 1, column: 11 }
                         }
                     },
+                    optional: false,
                     range: [4, 12],
                     loc: {
                         start: { line: 1, column: 4 },
@@ -6385,6 +6388,7 @@ var testFixtureOptions = {},
                             end: { line: 1, column: 11 }
                         }
                     },
+                    optional: false,
                     range: [4, 11],
                     loc: {
                         start: { line: 1, column: 4 },
@@ -6439,6 +6443,7 @@ var testFixtureOptions = {},
                             end: { line: 1, column: 14 }
                         }
                     },
+                    optional: false,
                     range: [0, 14],
                     loc: {
                         start: { line: 1, column: 0 },
@@ -6552,6 +6557,7 @@ var testFixtureOptions = {},
                         end: { line: 1, column: 17 }
                     }
                 },
+                optional: false,
                 range: [0, 17],
                 loc: {
                     start: { line: 1, column: 0 },
@@ -6591,6 +6597,7 @@ var testFixtureOptions = {},
                             end: { line: 1, column: 17 }
                         }
                     },
+                    optional: false,
                     range: [0, 17],
                     loc: {
                         start: { line: 1, column: 0 },
@@ -6606,6 +6613,7 @@ var testFixtureOptions = {},
                         end: { line: 1, column: 29 }
                     }
                 },
+                optional: false,
                 range: [0, 29],
                 loc: {
                     start: { line: 1, column: 0 },
@@ -6648,6 +6656,7 @@ var testFixtureOptions = {},
                                 end: { line: 1, column: 17 }
                             }
                         },
+                        optional: false,
                         range: [0, 17],
                         loc: {
                             start: { line: 1, column: 0 },
@@ -6663,6 +6672,7 @@ var testFixtureOptions = {},
                             end: { line: 1, column: 29 }
                         }
                     },
+                    optional: false,
                     range: [0, 29],
                     loc: {
                         start: { line: 1, column: 0 },
@@ -6678,6 +6688,7 @@ var testFixtureOptions = {},
                         end: { line: 1, column: 35 }
                     }
                 },
+                optional: false,
                 range: [0, 35],
                 loc: {
                     start: { line: 1, column: 0 },
@@ -6730,6 +6741,7 @@ var testFixtureOptions = {},
                         end: { line: 1, column: 37 }
                     }
                 },
+                optional: false,
                 range: [0, 38],
                 loc: {
                     start: { line: 1, column: 0 },
@@ -6766,6 +6778,7 @@ var testFixtureOptions = {},
                         end: { line: 1, column: 19 }
                     }
                 },
+                optional: false,
                 range: [0, 20],
                 loc: {
                     start: { line: 1, column: 0 },
@@ -6806,6 +6819,7 @@ var testFixtureOptions = {},
                             end: { line: 1, column: 11 }
                         }
                     },
+                    optional: false,
                     range: [0, 12],
                     loc: {
                         start: { line: 1, column: 0 },
@@ -6821,6 +6835,7 @@ var testFixtureOptions = {},
                         end: { line: 1, column: 21 }
                     }
                 },
+                optional: false,
                 range: [0, 21],
                 loc: {
                     start: { line: 1, column: 0 },
@@ -6875,6 +6890,7 @@ var testFixtureOptions = {},
                         end: { line: 1, column: 21 }
                     }
                 },
+                optional: false,
                 range: [0, 21],
                 loc: {
                     start: { line: 1, column: 0 },
@@ -6934,6 +6950,7 @@ var testFixtureOptions = {},
                                 end: { line: 1, column: 21 }
                             }
                         },
+                        optional: false,
                         range: [0, 21],
                         loc: {
                             start: { line: 1, column: 0 },
@@ -6983,6 +7000,7 @@ var testFixtureOptions = {},
                         end: { line: 1, column: 41 }
                     }
                 },
+                optional: false,
                 range: [0, 41],
                 loc: {
                     start: { line: 1, column: 0 },
@@ -7027,6 +7045,7 @@ var testFixtureOptions = {},
                                     end: { line: 1, column: 10 }
                                 }
                             },
+                            optional: false,
                             range: [0, 10],
                             loc: {
                                 start: { line: 1, column: 0 },
@@ -7042,6 +7061,7 @@ var testFixtureOptions = {},
                                 end: { line: 1, column: 20 }
                             }
                         },
+                        optional: false,
                         range: [0, 20],
                         loc: {
                             start: { line: 1, column: 0 },
@@ -7057,6 +7077,7 @@ var testFixtureOptions = {},
                             end: { line: 1, column: 39 }
                         }
                     },
+                    optional: false,
                     range: [0, 39],
                     loc: {
                         start: { line: 1, column: 0 },
@@ -7109,6 +7130,7 @@ var testFixtureOptions = {},
                         end: { line: 1, column: 11 }
                     }
                 },
+                optional: false,
                 range: [0, 11],
                 loc: {
                     start: { line: 1, column: 0 },
@@ -7145,6 +7167,7 @@ var testFixtureOptions = {},
                         end: { line: 1, column: 13 }
                     }
                 },
+                optional: false,
                 range: [0, 13],
                 loc: {
                     start: { line: 1, column: 0 },
@@ -7181,6 +7204,7 @@ var testFixtureOptions = {},
                         end: { line: 1, column: 14 }
                     }
                 },
+                optional: false,
                 range: [0, 14],
                 loc: {
                     start: { line: 1, column: 0 },
@@ -7217,6 +7241,7 @@ var testFixtureOptions = {},
                         end: { line: 1, column: 13 }
                     }
                 },
+                optional: false,
                 range: [0, 13],
                 loc: {
                     start: { line: 1, column: 0 },
